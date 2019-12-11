@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title_name %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.plyr.io/static/icons/favicon.ico">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="bootstrap-css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="plyr/plyr.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <a href="https://github.com/agonza1/video-insights-detection">
+    <img style="position: absolute; top: 0; left: 0; border: 0; z-index: 1001;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub">
+  </a>
+  <div class="grid ml-3">
+    <header>
+      <h1 id="title">Vi<span></span><span></span>sights</h1>
+      <p>
+        A simple media player to enhance the way you watch videos
+      </p>
+
+      <div class="mt-2 mb-2">
+        <button id="getInsightsBtn" type="button" class="btn btn-primary">
+          <a href="#" style="color: white;" class="button js-shr">
+            Superpower video →
+          </a>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="streamed-video">
+          <!-- Video files -->
+          <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+          <!--<source src="video/FASHION-TRENDS.mp4" type="video/mp4" size="720">-->
+          <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+
+          <!-- Caption files -->
+          <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                 default>
+          <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+
+          <!-- Fallback for browsers that don't support the <video> element -->
+          <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+        </video>
+
+        <canvas style="width: 500px;"></canvas>
+        <img id="my-screenshot"/>
+        <div class="actions">
+          <button type="button" class="btn js-play">Play</button>
+          <button type="button" class="btn js-pause">Pause</button>
+          <button type="button" class="btn js-stop">Stop</button>
+          <button type="button" class="btn js-rewind">Rewind</button>
+          <button type="button" class="btn js-forward">Forward</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="jquery-js/jquery.js"></script>
+  <script src="bootstrap-js/bootstrap.js"></script>
+  <script src="plyr/plyr.js"></script>
+  <script src="js/capture-video-frame.js"></script>
+  <script src="js/demo.js" crossorigin="anonymous"></script>
+  </body>
+</html>

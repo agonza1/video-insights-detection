@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#title {
+  font-size: 4rem;
+  color: rgb(0, 179, 255);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0px 0px 24px;
+}
+
+.container {
+  padding: 0px !important;
+}
