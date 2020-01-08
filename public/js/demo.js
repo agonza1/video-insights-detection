@@ -43,7 +43,7 @@
 
             $.ajax({
                 method: 'POST',
-                url: 'https://vision.googleapis.com/v1/images:annotate?key=<gckey>',
+                url: 'https://vision.googleapis.com/v1/images:annotate?key=KEY',
                 contentType: 'application/json',
                 data: JSON.stringify(request),
                 processData: false,
