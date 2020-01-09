@@ -43,18 +43,28 @@
 
             $.ajax({
                 method: 'POST',
-                url: 'https://vision.googleapis.com/v1/images:annotate?key=<gckey>',
+                url: 'https://vision.googleapis.com/v1/images:annotate?key=<gcKey>',
                 contentType: 'application/json',
                 data: JSON.stringify(request),
                 processData: false,
                 success: function(data){
                     output = data;
-                    console.log(data);
+                    // console.log(data);
                     let websData = data.responses[0];
                     // console.log('joy: ' + faceData.joyLikelihood);
                     // console.log('sorrow: ' + faceData.sorrowLikelihood);
-                    // console.log('anger: ' + faceData.angerLikelihood);
-                    // console.log('surprise: ' + faceData.surpriseLikelihood);
+                    console.log(websData.webDetection);
+                    Swal.fire({
+                        position: 'top-end',
+                        title: `Sweet! Detected: ${JSON.stringify(websData.webDetection.bestGuessLabels[0].label)}`,
+                        text: 'Found similar image.',
+                        imageUrl: websData.webDetection.visuallySimilarImages[0].url,
+                        imageWidth: 400,
+                        imageHeight: 200,
+                        imageAlt: `${websData.webDetection.bestGuessLabels[0].label}_image`,
+                        showConfirmButton: false,
+                        timer: 5000
+                    })
                 },
                 error: function (data, textStatus, errorThrown) {
                     console.log('error: ' + JSON.stringify(data));

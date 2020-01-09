@@ -25,6 +25,7 @@ app.use('/bootstrap-css', express.static(__dirname + '/node_modules/bootstrap/di
 app.use('/bootstrap-js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use('/jquery-js', express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/plyr', express.static(__dirname + '/node_modules/plyr/dist'));
+app.use('/sweetalert2', express.static(__dirname + '/node_modules/sweetalert2/dist'));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

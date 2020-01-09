@@ -15,6 +15,7 @@
     "http-errors": "~1.6.3",
     "jquery": "^3.4.1",
     "morgan": "~1.9.1",
-    "plyr": "latest"
+    "plyr": "latest",
+    "sweetalert2": "^9.5.4"
   }
 }
